@@ -1,8 +1,28 @@
 // Home Content
 
 .home {
+  .nav{
+    .display(column, 10px);
+    background-color: @wild-sand;
+    border: 1px solid @sea-shell;
+    .navbar{
+      .display(row, 0px);
+      width: 60%;
+      justify-content: center;
+      justify-content: space-between;
+      a{
+        text-decoration: none;
+        color: @river-bend;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
 
   .intro {
+    .main-header-img{
+      border-radius: 10px;
+    }
 
     h2 {
       padding: 15px;
@@ -18,6 +38,22 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    .blast{
+      @media @mobile{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .sky{
+      @media @mobile{
+        display: none;
+      }
+    }
+    .launch{
+      @media @mobile{
+        display: none;
+      }
+    }
 
     img {
       width: 28%;
@@ -29,7 +65,7 @@
 
   .visit-planets {
     padding: 15px;
-
+    }
     h3 {
       margin-top: 11px;
     }
@@ -37,7 +73,7 @@
     p {
       margin-top: 13px;
     }
-  }
+  
 
   .walk {
     margin-top: 60px;
@@ -45,9 +81,17 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    @media @mobile{
+      .display(column-reverse, 15px);
+      width: 100%;
+    }
 
     .walk-text {
       width: 50%;
+      @media @mobile{
+        width: 100%;
+        }
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,12 +102,36 @@
       }
 
       .btn {
-      }
-    }
+        .display(column, 0px);
+        background-color: #23293B;
+        border-radius: 5px;
+        width: 25%;
+        @media @mobile{
+          width: 100%;
+        }
+        }
+        .btn a:hover{
+          background-color: darkblue;
+          color: lightgrey;
+          border-radius: 5px;
+        }
 
+        a{
+          text-decoration: none;
+          color: white;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+          width: 100%;
+          padding: 5%;
+        }
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      @media @mobile{
+        width: 100%;
+        margin: 20px;
+      }
       
       img {
         width: 100%;
